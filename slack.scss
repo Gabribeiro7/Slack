@@ -1,0 +1,579 @@
+@import './reset.css';
+
+* {
+    box-sizing: border-box;
+    
+}
+
+html, body, .root  {
+    overflow-x:hidden;
+    height: 100%;
+    margin: 0;
+    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+}
+
+.header {
+    padding: 18px;
+    position: absolute;
+    height: 80px;
+    background-color: #521554;
+    // border-bottom: none;
+    // z-index: 1000;
+    // top: 0;
+
+   
+
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+
+        &__logo{ 
+            width: 30%;
+            object-fit: contain;
+           }
+        &__logo img{
+            width: 100%;
+            filter: invert(1);
+        }
+
+        &__menu{
+            width:11%;
+        }
+        &__menu img{
+            width:100%;
+            filter: invert(1);
+        }
+    }   
+
+
+    &__signup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__image {
+        background-image: url(./IMGS/1\ foto.PNG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 300px;
+    }
+}
+
+.billboard{
+
+    padding: 96px  18px 48px;
+    background-color: #521554;
+    font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    text-align: center;
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            color: #FFFFFF;
+            font-size: 42px;
+            font-weight: bolder;
+            padding-bottom: 10px;
+            line-height: 1.063;
+            letter-spacing: -1.5px;
+
+        }
+        h1 span{
+            color:#ecb22e;
+        }
+        p{
+            color: #FFFFFF;
+            padding-bottom: 40px; 
+            line-height: 1.445;
+        }
+    }
+    
+    &__signup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        a{
+            width: 100%;
+           
+        }
+        button{
+            // display: flex;
+            // flex-direction: row;
+            position: relative;
+            width:100%;
+            margin: 0px 0px 15px 0px;
+            padding: 19px 40px 20px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            font-weight: 700;
+            color: #611f69;
+            text-align: center;
+        }
+        
+        button img{
+            // width: 12%;
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #FFFFFF;
+            
+        }
+    }
+
+    &__img  {
+        height: 300px;
+     }
+    &__img img{
+        width: 160%;
+        overflow: overlay;
+        margin-left: -50px;
+    }
+
+}
+.trust {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: #F4EDE3;
+    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    
+    
+
+    &__companies {
+        padding-top: 65px;
+        text-align: center;
+        padding-left: 18px;
+        padding-right: 18px;
+
+        h2{
+            font-weight: 700;
+            line-height: 1.125;
+            // letter-spacing: .8px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            
+        }
+        &-logos{
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+            column-gap: 40px;
+        }
+    }
+    &__feature{
+        padding: 48px 0px 48px 0px;
+    }
+    &__feature:nth-child(odd) {
+        text-align: right;
+    }
+
+    &-feature__details {
+        padding: 18px;
+
+        h2{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.125;
+            // letter-spacing: .8px;
+            // text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-weight: 500;
+            line-height: 1.45;
+            letter-spacing: normal;
+            font-size: 19px;
+            margin-bottom: 20px;
+        }
+        
+        a{
+            font-size: 19px;
+            text-decoration: none;
+            color: #1264a3;
+        }
+    }
+
+
+}
+
+.testimonials {
+    background-color: #FFFFFF;
+
+    h2 {
+        text-align: center;
+        padding: 18px;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 1.125;
+        // letter-spacing: .8px;
+        // text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    p {
+        padding: 0px 18px 18px;
+        font-weight: 500;
+        line-height: 1.45;
+        letter-spacing: normal;
+        font-size: 21px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    &__cta {
+        padding: 0px 18px 18px;
+        display: flex;
+        flex-direction: column;
+
+        a{
+            width: 100%;
+        }
+        
+        button{
+            // display: flex;
+            // flex-direction: row;
+            position: relative;
+            width:100%;
+            margin: 0px 0px 15px 0px;
+            padding: 19px 40px 20px;
+            border-color: #FFFFFF;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            background-color: #611f69;
+        }
+    }
+
+       
+    
+    
+    &__stadistics {
+        text-align: center;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .stadistics {
+            &__block {
+                max-width: 200px;
+                margin: 0 auto;
+
+                .block{
+                    &__percentage {
+                        font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+                        font-weight: 700;
+                        line-height: 1;
+                        letter-spacing: normal;
+                        font-size: 3rem;
+                        color: #611f69;
+                        white-space: nowrap;
+                        display: inline-block;
+                        margin-bottom: 0.25rem;
+                    } 
+                    &__caption {
+                        padding: 18px 12px;
+                        font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+                    }
+                        
+                }
+            }
+            
+        
+
+        }
+         
+    }
+    &__testimonial{
+
+        .testimonial {
+
+            
+            &__video{
+                
+                video{
+                    width: 95%;
+                    border-top-right-radius: 550px;
+                    border-bottom-right-radius: 550px;
+                    margin-bottom: 50px;
+                }
+            }
+
+            &__message{
+                
+                padding: 32px;
+                font-family: Slack-Larsseit,
+                    "Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+
+                cite {
+                    text-align: center;
+                    font-style: italic;
+                    font-size: 20px;
+                    
+                }
+                address{
+                    padding-top: 20px;
+                    text-align: start;
+
+                    strong{
+                        font-weight: 600;
+                    }
+                    p{
+                        text-align: start;
+                        padding: 5px 0px 10px 0px;
+                        font-size: 16px; 
+                    }
+                }
+
+                a{
+                    color:#1264a3;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &__caption{
+
+        p{
+            font-size: 16px;
+            color: #696969;
+        }
+    }
+     
+    
+}
+
+.features {
+    background-color: #F4EDE3;
+    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+
+    h2{
+        font-size: 25px;
+        text-align: center;
+        font-weight: 600;
+        padding: 40px 18px 20px 18px;
+    }
+    .carrusel {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__card{
+            display: flex;
+            // justify-content: flex-start;
+            flex-direction: column;
+            background-color: white;
+            width: 60%;
+            padding:10px;
+
+            img{
+                width: 100%;
+                object-fit: contain;
+                // margin-top: 10px;
+                align-self: center;
+            }
+            p{
+                // align-self: flex-start;
+                padding-top: 10px;
+                font-size: 12px;
+                /* font-style: italic; */
+                color: #6e6c6c;
+
+            }
+            h3{
+                padding:10px 0px 20px 0px;
+                font-size: 25px;
+                font-weight: 600;
+            }
+            a{
+                text-decoration: none;
+                color: #1264a3;
+            }
+
+        }
+
+        &__slider {
+                /* height: 80px; */
+            margin: 20px 0px 30px 0px;
+
+        }
+
+        &__slider-dot::before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #C8C2BA;
+            margin-left: 5px;
+        }
+
+        &__slider-dot.selected::before {
+            background-color: #521554;
+        }
+    }
+}
+
+.cta {
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+    // height: 90vw;
+    background-color: #521554;
+    clip-path: ellipse(99% 100% at center top);
+    padding: 50px 18px;
+    
+
+    &__title h2{
+        font-size: 30px;
+        color: #FFFFFF;
+        text-align: center;
+        /* text-transform: uppercase; */
+        font-weight: 600;
+
+    }
+
+    &__buttons {
+        padding: 45px 0px;
+        display: flex;
+        flex-direction: column;
+
+        a{
+            width: 100%;
+        }
+        
+        button{
+            // display: flex;
+            // flex-direction: row;
+            position: relative;
+            width:100%;
+            margin: 0px 0px 15px 0px;
+            padding: 19px 40px 20px;
+            border-color: #FFFFFF;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: .8px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            background-color: #611f69;
+        }
+    }
+}
+
+#scndbtn, #fourthBtn {
+            
+            border-color: #611f69;
+            background-color: white;
+            color: #611f69;
+}
+
+
+.footer {
+    padding: 18px;
+    background-color: #FFFFFF;
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5px;
+
+        .info{
+            &__logo{
+
+                width:55%;
+                object-fit: contain;
+                margin-bottom: 20px;
+
+            }
+            &__logo img{
+                width: 100%;
+                filter: invert(1);
+            }
+
+            &__list{
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 2.8;
+                text-transform: uppercase;
+            }
+        }
+        
+    }
+
+    .break{
+        background-color: #ebeaeb;
+        border-radius: 50px;
+        height: 2px;
+        margin-bottom: 10px;
+        margin-top:10px;
+    }
+
+    &__config{
+        
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 2.8;
+            text-transform: uppercase;
+        
+        .config{
+            &__icon{
+                display: flex;
+                align-items: center;
+                
+                img{
+                    margin-right: 10px;
+                }
+            }
+
+            &__download{
+                display: flex;
+                color: #1264a3;
+                align-items: center;
+
+                img{
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        
+    }
+    &__socials{
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px;
+        justify-content: space-between;
+        padding-bottom: 15px;
+    }
+
+    &__rights{
+        display: flex;
+        height: 100px;
+
+        span {
+            font-size: 12px;
+            color: #696969;
+            line-height: 1.8;
+        }
+    }
+}
