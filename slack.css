@@ -12,9 +12,9 @@ html, body, .root {
 
 .header {
   padding: 18px;
-  position: absolute;
   height: 80px;
   background-color: #521554;
+  z-index: 1;
 }
 .header-nav {
   display: flex;
@@ -26,27 +26,18 @@ html, body, .root {
      object-fit: contain;
 }
 .header-nav__logo img {
-  width: 100%;
+  width: 150px;
   filter: invert(1);
 }
 .header-nav__menu {
   width: 11%;
 }
 .header-nav__menu img {
-  width: 100%;
+  width: 50px;
   filter: invert(1);
 }
-.header__signup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.header__image {
-  background-image: url(./IMGS/1\ foto.PNG);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 300px;
+.header-nav__options {
+  display: none;
 }
 
 .billboard {
@@ -106,10 +97,10 @@ html, body, .root {
   background-color: #FFFFFF;
 }
 .billboard__img {
-  height: 300px;
+  width: 100%;
 }
 .billboard__img img {
-  width: 160%;
+  width: 700px;
   overflow: overlay;
   margin-left: -50px;
 }
@@ -279,7 +270,7 @@ html, body, .root {
   background-color: #F4EDE3;
   font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
 }
-.features h2 {
+.features__h2 {
   font-size: 25px;
   text-align: center;
   font-weight: 600;
@@ -289,6 +280,30 @@ html, body, .root {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.features .carrusel__card-wide {
+  display: none;
+}
+.features .carrusel__card-wide img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  align-self: center;
+}
+.features .carrusel__card-wide p {
+  padding-top: 10px;
+  font-size: 12px;
+  /* font-style: italic; */
+  color: #6e6c6c;
+}
+.features .carrusel__card-wide h3 {
+  padding: 10px 0px 20px 0px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.features .carrusel__card-wide a {
+  text-decoration: none;
+  color: #1264a3;
 }
 .features .carrusel__card {
   display: flex;
@@ -449,4 +464,187 @@ html, body, .root {
   font-size: 12px;
   color: #696969;
   line-height: 1.8;
+}
+
+@media (min-width: 1084px) {
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  .header-nav {
+    display: flex;
+    width: 100%;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 0 5%;
+  }
+  .header-nav__logo {
+    width: 20%;
+  }
+  .header-nav__logo img {
+    width: 150px;
+    filter: invert(1);
+  }
+  .header-nav__menu {
+    display: none;
+  }
+  .header-nav__menu img {
+    display: none;
+  }
+  .header-nav__options {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+  }
+  .header-nav__options .options__ul {
+    display: flex;
+  }
+  .header-nav__options .options__ul .ul__li {
+    display: flex;
+    gap: 20px;
+    color: #FFFFFF;
+    line-height: 1.445;
+    font-weight: 600;
+  }
+  .header-nav__options .options__buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20pxpx;
+  }
+  .header-nav__options .options__buttons .buttons__nav-frst {
+    border-radius: 5px;
+    letter-spacing: 0.8px;
+    color: white;
+    background-color: #521554;
+    border: 0px;
+    padding: 15px;
+    margin-right: 15px;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  .header-nav__options .options__buttons .buttons__nav-scnd {
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #521554;
+    background-color: white;
+    border: 0px;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  .billboard {
+    display: flex;
+    align-items: center;
+  }
+  .billboard__img {
+    width: 100%;
+  }
+  .billboard__img img {
+    width: 650px;
+    margin-left: 0;
+  }
+  .trust {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: #F4EDE3;
+    font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+  }
+  .trust__feature {
+    padding: 48px 0px 48px 0px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  .trust-feature__details {
+    padding: 18px;
+    width: 35%;
+    text-align: center;
+  }
+  #trust-feature__image2 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonials__cta {
+    padding: 0px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonials__cta a {
+    width: 800px;
+  }
+  .testimonials__stadistics {
+    flex-direction: row;
+    margin-bottom: 100px;
+  }
+  .testimonials__stadistics .stadistics__block {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .testimonials__testimonial {
+    display: flex;
+  }
+  .testimonials__testimonial .testimonial__video video {
+    width: 600px;
+  }
+  .testimonials__testimonial .testimonial__message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    width: 40%;
+  }
+  .testimonials__caption {
+    display: flex;
+    width: 80%;
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .features .carrusel {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .features .carrusel__card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 20%;
+    padding: 10px;
+    margin: 20px 10px;
+  }
+  .features .carrusel__card-wide {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 20%;
+    padding: 10px;
+    margin: 20px 10px;
+  }
+  .features .carrusel__slider {
+    display: none;
+  }
+  .cta__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+  .cta__buttons a {
+    width: 30%;
+  }
 }/*# sourceMappingURL=slack.css.map */
